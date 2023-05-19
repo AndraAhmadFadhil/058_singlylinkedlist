@@ -26,7 +26,7 @@ List::List()
 {
 	START = NULL;
 }
-void List::addNote() 
+void List::addNote() /*Menambahkan sebuah Node dalam List*/
 {
 	int nim;
 	char nm[20];
@@ -79,4 +79,15 @@ bool List::listEmpty()
 	else
 		return false;
 }
-bool List::delNote(int nim)
+bool List::delNote(int nim)/*Menghapus node dari dalam list*/
+{
+	Node* current, * previous;
+	if (Search(nim, &previous, &current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == START)
+		START = START->next;
+
+	delete current;
+	return true;
+}
