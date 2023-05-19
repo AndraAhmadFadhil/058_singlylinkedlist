@@ -79,3 +79,4 @@ bool List::listEmpty()
 	else
 		return false;
 }
+bool List::delNote(int nim)
