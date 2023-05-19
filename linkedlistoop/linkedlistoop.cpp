@@ -104,3 +104,8 @@ bool List::Search(int nim, Node** previous, Node** current)
 	}
 	return (*current != NULL);
 }
+
+void List::traverse()
+{
+
+}
