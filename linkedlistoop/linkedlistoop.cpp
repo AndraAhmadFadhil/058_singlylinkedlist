@@ -71,3 +71,11 @@ void List::addNote()
 	nodeBaru->next = current;
 	previous->next = nodeBaru;
 }
+
+bool List::listEmpty()
+{
+	if (START == NULL)
+		return true;
+	else
+		return false;
+}
